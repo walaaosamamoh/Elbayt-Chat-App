@@ -19,8 +19,8 @@
           :required="true"
           v-model="password"
         />
-        <Button class="w-full mb-4 p-2 my-2 bg-teal-600 cursor-pointer text-white rounded"
-          >Continue to Chat</Button
+        <button type="submit" class="w-full mb-4 p-2 my-2 bg-teal-600 cursor-pointer text-white rounded"
+          >Continue to Chat</button
         >
       </form>
       <p class="text-center w-full mb-4">
@@ -60,7 +60,6 @@ export default {
         this.error = 'All input fields are required!'
         return
       }
-
       try {
         await signInWithEmailAndPassword(auth, this.email, this.password)
 
